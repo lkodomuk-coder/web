@@ -2,22 +2,75 @@
 <html>
 <head>
     <title>SummitX Trading Corporation</title>
+
+    <script>
+        // Countdown Timer (1 hour)
+        let countDownDate = new Date().getTime() + (60 * 60 * 1000);
+
+        let x = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
 </head>
-<body style="text-align:center; font-family:Arial; margin-top:50px;">
 
-    <h2>Welcome to SummitX Trading Corporation</h2>
+<body style="margin:0; font-family:Arial; background:linear-gradient(to right,#141e30,#243b55); color:white;">
 
-    <p>Click the link below to join our WhatsApp group</p>
+    <div style="max-width:420px; margin:50px auto; background:white; color:black; padding:25px; border-radius:12px; text-align:center; box-shadow:0 0 20px rgba(0,0,0,0.4);">
 
-    <a href="https://chat.whatsapp.com/Dw8JHQ6tLEWEPq7dxsvKRE?mode=gi_t" target="_blank">
-        <button style="padding:12px 25px; font-size:16px; background-color:#25D366; color:white; border:none; border-radius:5px;">
-            Join WhatsApp Group
-        </button>
-    </a>
+        <!-- LOGO -->
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="80">
 
-    <p>or WhatsApp us on</p>
+        <h1>SummitX Trading</h1>
 
-    <p><b>+1 (385) 417-1694</b></p>
+        <p>Join our exclusive trading community and start earning today.</p>
+
+        <!-- TIMER -->
+        <p style="color:red; font-weight:bold;">Offer ends in: <span id="timer"></span></p>
+
+        <!-- BUTTON WITH AUTO MESSAGE -->
+        <a href="https://wa.me/13854171694?text=Hello%20I%20want%20to%20join%20SummitX%20Trading" target="_blank">
+            <button style="background:#25D366; color:white; padding:15px 25px; border:none; font-size:16px; border-radius:6px;">
+                Join WhatsApp Now
+            </button>
+        </a>
+
+        <p style="margin-top:15px;">or join group below</p>
+
+        <!-- GROUP LINK -->
+        <a href="https://chat.whatsapp.com/Dw8JHQ6tLEWEPq7dxsvKRE?mode=gi_t" target="_blank">
+            <button style="background:black; color:white; padding:10px 20px; border:none; border-radius:6px;">
+                Join WhatsApp Group
+            </button>
+        </a>
+
+        <hr style="margin:20px 0;">
+
+        <!-- TESTIMONIALS -->
+        <h3>What Our Members Say</h3>
+
+        <p>"I made my first profit in 2 days!"</p>
+        <p>"Best trading group ever 🔥"</p>
+        <p>"Very legit and helpful community"</p>
+
+        <hr style="margin:20px 0;">
+
+        <!-- CONTACT -->
+        <p>Contact us:</p>
+        <p><b>+1 (385) 417-1694</b></p>
+
+    </div>
 
 </body>
 </html>
